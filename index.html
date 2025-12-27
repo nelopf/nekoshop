@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-title" content="VIP Group">
+    <title>VIP Group - Exclusive Access</title>
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="css/bootstrap.min.css" as="style">
+    <link rel="preload" href="css/all.min.css" as="style">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="accests/video/vsl.MOV" as="video">
+    <link rel="preload" href="accests/js/script.js" as="script">
+    
+    <!-- Importação do framework Bootstrap para estilização responsiva -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- Importação da biblioteca de ícones Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" media="print" onload="this.media='all'">
+    <!-- Importação do arquivo de estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Script do Stripe para processamento de pagamentos (carregado de forma assíncrona) -->
+    <script async="" src="js/buy-button.js" defer=""></script>
+    
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Get exclusive VIP access to premium content. Limited time offer!">
+    <meta name="keywords" content="VIP, exclusive, premium content, limited offer">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Preload de fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+</head>
+<body>
+    <!-- Banner superior com contagem regressiva para criar senso de urgência -->
+    <div class="deadline-banner">
+        <i class="fas fa-clock"></i> LIMITED OFFER: EXPIRES IN 
+        <span id="countdown">
+            <span id="minutes">02</span>:<span id="seconds">00</span>
+        </span>
+    </div>
+
+    <!-- Barra de navegação principal com logo -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.webp" alt="Logo" class="navbar-logo">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Container principal que contém o vídeo e a seção de pagamento -->
+    <div class="container vsl-container">
+        <!-- Container do vídeo com proporção 16:9 para manter o aspecto correto -->
+        <div class="video-wrapper">
+            <video id="mainVideo" controls="" autoplay="" playsinline="" webkit-playsinline="" preload="auto" muted="" style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="media/vsl.MOV" type="video/mp4">
+                <source src="media/vsl.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Contador de visualizações movido para dentro do vídeo -->
+            <div class="live-viewers">
+                <i class="fas fa-eye"></i>
+                <span id="viewerCount">0</span> people watching
+            </div>
+        </div>
+        
+        <!-- Seção de chamada para ação (Call-to-Action) -->
+        <div class="cta-section">
+            <h2><i class="fas fa-star"></i> GET YOUR VIP ACCESS NOW</h2>
+            <p class="bonus-text">Bonus: Two folders of the mega link of cp included!</p>
+            <div class="payment-container">
+                <!-- Botão principal de pagamento com linYk para o Stripe -->
+                <a href="https://buy.stripe.com/dRm00ialq6OMbVl8Fq0gw16" class="payment-button" target="_blank" rel="noopener">
+                    <i class="fas fa-lock"></i> GET VIP ACCESS NOW
+                </a>
+                
+                <!-- Seção que exibe os diferentes métodos de pagamento disponíveis -->
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <i class="fab fa-apple-pay"></i>
+                        <span>Apple Pay</span>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fab fa-google-pay"></i>
+                        <span>Google Pay</span>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fab fa-paypal"></i>
+                        <span>PayPal</span>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Credit Card</span>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fab fa-bitcoin"></i>
+                        <span>Crypto</span>
+                    </div>
+                </div>
+
+                <!-- Botão de contato alternativo via Telegram com gradiente -->
+                <div class="telegram-container">
+                    <a href="https://t.me/specy18" class="telegram-button" target="_blank" rel="noopener" style="background: linear-gradient(45deg, #0088cc, #00a2ff);">
+                        <i class="fab fa-telegram"></i> Contact via Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Importação do JavaScript do Bootstrap para funcionalidades interativas -->
+    <script src="js/bootstrap.bundle.min.js" defer=""></script>
+    <!-- Importação do script personalizado -->
+    <script src="js/script.js" defer=""></script>
+
+
+
+</body></html>
